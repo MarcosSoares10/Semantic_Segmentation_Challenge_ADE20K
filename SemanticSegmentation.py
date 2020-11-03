@@ -152,7 +152,6 @@ def load_image_test(datapoint: dict) -> tuple:
 def data_augmentation(input_image, input_mask):
     input_image = tf.image.random_brightness(input_image, max_delta=0.1)
     input_image = tf.image.random_contrast(input_image, lower=0.1, upper=0.2)
-    input_image = tf.image.random_flip_left_right(input_image)
 
     return input_image, input_mask
 
